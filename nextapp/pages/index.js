@@ -7,7 +7,7 @@ import Link from "next/link"
 export default function Home() {
   return (
     <div className={plorusStyles.container}>
-      <h1 className={plorusStyles.title}>Homepage</h1>
+      <h1 className="font-mono text-blue-600">Homepage</h1>
       <Link href="/about"><a>About</a></Link>
     </div>
   )
