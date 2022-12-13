@@ -10,8 +10,20 @@ body {
   background-color: aqua;
 }
 
+.signupFormModal{
+  position:fixed;
+  top:0;
+  left:0;
+  height:60vh;
+  width:40vw;
+  margin:20vh 30vw;
+  background-color: gray;
+  padding:2rem;
+}
 
-
+.xbutton{
+  float:right;
+}
 
 
 
