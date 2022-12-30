@@ -11,6 +11,7 @@ export default function Home() {
     <div className={plorusStyles.container}>
       <h1 className="font-mono text-blue-600">Homepage</h1>
       <Link href="/about"><a>About</a></Link>
+      <Link href="/users"><a>Users List</a></Link>
       <Carousel />
       <Button />
     </div>
