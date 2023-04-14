@@ -24,7 +24,12 @@ module.exports = {
 
       'sm': {'max': '639px'},
       // => @media (max-width: 639px) { ... }
-    }
+    },
+    extend: {
+      backgroundImage: {
+        'my_bg_image' : "url('../public/cells-bg.svg')",
+      }
+    },
   },
   plugins: [
     require('tailwind-scrollbar'),

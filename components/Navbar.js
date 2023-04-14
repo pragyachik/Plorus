@@ -23,8 +23,8 @@ const Navbar = () => {
     <>
     {/* <nav className={"h-[14vh] w-full "+(scrollPosition?"shadow-[0px_4px_20px_0px_rgba(0,0,0,.15)] bg-[rgba(255,255,255,0.5)] border-none":" border-b-2 border-b-white")}>
     </nav> */}
-    <nav className={"flex flex-row justify-between pl-12 pr-12 items-center fixed top-0 left-0 h-[10vh] w-full "+(isScrolled?"shadow-[0px_4px_20px_0px_rgba(0,0,0,.15)] bg-[rgba(255,255,255,0.8)] border-none":"bg-[rgba(0,0,0,0.15)]  border-b-2 border-b-white")}>
-      <div className={"text-3xl font-mono "+(isScrolled?" text-black":" text-white")}>
+    <nav className={"flex flex-row justify-between px-12 md:px-6 items-center fixed top-0 left-0 h-[10vh] w-full "+(isScrolled?"shadow-[0px_4px_20px_0px_rgba(0,0,0,.15)] bg-[rgba(255,255,255,0.8)] border-none":"bg-[rgba(0,0,0,0.15)]  border-b-2 border-b-white")}>
+      <div className={"text-3xl md:text-2xl font-mono "+(isScrolled?" text-black":" text-white")}>
         Plorus
       </div>
       <div className={"md:hidden flex flex-row space-between font-mono text-xl"+(isScrolled?" text-black":" text-white")}>
@@ -44,7 +44,7 @@ const Navbar = () => {
       <div className={"hidden md:block "}>
         <svg
         xmlns="http://www.w3.org/2000/svg"
-        class="w-10 h-10"
+        class="w-8 h-8"
         fill="none"
         viewBox="0 0 24 24"
         stroke={isScrolled?"black":"white"}
