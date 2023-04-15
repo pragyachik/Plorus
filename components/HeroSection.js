@@ -28,19 +28,19 @@ const HeroSection = () => {
           
         </div>
         <div className="h-[100vh] w-full bg-white pb-[5vh]">
-            <div className='md:hidden ml-[10vw] mt-[10vh] h-[10vh] items-center font-bold text-slate-500 text-2xl'>
+            <div className='mx-[10vw] mt-[10vh] h-[10vh] items-center font-bold text-slate-500 text-2xl'>
               Benefits of Plorus
             </div>
-            <div className='md:hidden flex flex-row h-[70vh] mx-[10vw] w-[80vw] border-2 border-slate-200'>
+            <div className='flex flex-row h-[70vh] mx-[10vw] w-[80vw] border-2 border-slate-200'>
 
             </div>
         </div>
         <div className="h-[100vh] w-full bg-slate-200">
-          <div className="md:hidden bg-my_bg_image w-full h-[100vh] bg-cover bg-center bg-no-repeat">
-            <div className='w-full text-center pt-[10vh] h-[20vh] items-center font-bold text-slate-600 text-4xl text-mono'>
+          <div className="bg-my_bg_image w-full h-[100vh] bg-cover bg-center bg-no-repeat">
+            <div className='md:text-2xl w-full text-center pt-[10vh] h-[20vh] items-center font-bold text-slate-600 text-4xl text-mono'>
               Explore our latest blog posts!
             </div>
-            <div className='flex flex-row h-[70vh] mx-[10vw] w-[80vw] items-center justify-between'>
+            <div className='md:hidden flex flex-row h-[70vh] mx-[10vw] w-[80vw] items-center justify-between'>
                 <div className='h-[60vh] w-[20vw] mx-5 flex flex-col justify-center items-center'>
                   <div className="w-[20vw] h-[50vh] rounded-lg bg-gray-400">
 

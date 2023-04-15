@@ -3,7 +3,7 @@ const Footer = () => {
   return (
     <>
       <div className="h-[70vh] w-full bg-gray-800 pt-8 pb-8 flex flex-col justify-between px-10">
-        <div className="md:hidden w-full flex flex-col justify-left h-[10vh] px-[10vw] pt-4">
+        <div className="w-full flex flex-col justify-left h-[10vh] px-[10vw] md:px-[1vw] pt-4">
           <div className="text-slate-300 font-mono">Stay Updated</div>
           <div className="flex flex-row mt-2">
             <input type="text" className="text-lg w-60 h-10 text-md bg-slate-400 placeholder-slate-800 rounded-lg p-2" placeholder="Enter email"></input>
@@ -37,34 +37,36 @@ const Footer = () => {
             <div className="text-white font-mono font-normal pb-2">Privacy Policy</div>
           </div>
         </div>
-        <div className="my-4 border-t border-t-volcanic-800 md:hidden "></div>
-        <div className="pl-12 pr-12 flex flex-row justify-between text-white md:hidden ">
-          <div className="flex flex-row justify-between">
-            <div className="pl-2 pr-2">
-              © 2023 Plorus
-            </div>
-            <div className="pl-2 pr-2">
-              Privacy
-            </div>
-            <div className="pl-2 pr-2">
-              Terms of Use
+        <div>
+          <div className="my-4 border-t border-t-volcanic-800 "></div>
+            <div className="md:px-2 px-12 flex flex-row justify-between text-white ">
+              <div className="flex flex-row justify-between md:hidden">
+                <div className="pl-2 pr-2">
+                  © 2023 Plorus
+                </div>
+                <div className="pl-2 pr-2">
+                  Privacy
+                </div>
+                <div className="pl-2 pr-2">
+                  Terms of Use
+                </div>
+              </div>
+              <div className="flex flex-row justify-between">
+                <div className="pl-2 pr-2">
+                  Twitter
+                </div>
+                <div className="pl-2 pr-2">
+                  Linkedin
+                </div>
+                <div className="pl-2 pr-2">
+                  Discord
+                </div>
+                <div className="pl-2 pr-2">
+                  Instagram
+                </div>
+              </div>
             </div>
           </div>
-          <div className="flex flex-row justify-between">
-            <div className="pl-2 pr-2">
-              Twitter
-            </div>
-            <div className="pl-2 pr-2">
-              Linkedin
-            </div>
-            <div className="pl-2 pr-2">
-              Discord
-            </div>
-            <div className="pl-2 pr-2">
-              Instagram
-            </div>
-          </div>
-        </div>
       </div>
     </>
   )
