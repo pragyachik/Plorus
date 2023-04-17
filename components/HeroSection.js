@@ -9,10 +9,10 @@ const HeroSection = () => {
           <div className="mt-[10vh] h-[90vh] w-full bg-my_bg_image bg-cover bg-center bg-no-repeat flex flex-row">
             <div className="">
               <div className="text-6xl text-white font-bold font-sans pl-[10vw] pt-[25vh] w-[60vw] lg:w-[90vw] md:pt-[15vh] md:text-5xl">
-                Generate Academic Journals and assorted AI media
+                Generative AI to accelerate drug discovery
               </div>
               <div className="text-xl text-white font-mono pl-[10vw] pt-[3vh] w-[60vw] lg:w-[90vw] md:text-lg">
-                Find all our varied offerings on the documentation page
+                Contributing knowledge to Common Goods
               </div>
               <div className="pl-[10vw] pt-[5vh] flex flex-row">
                 <div>
