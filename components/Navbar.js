@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { useScroll, useMotionValueEvent } from "framer-motion"
+import Link from 'next/link'
 
 
 const Navbar = () => {
@@ -29,16 +30,24 @@ const Navbar = () => {
       </div>
       <div className={"md:hidden flex flex-row space-between font-mono text-xl"+(isScrolled?" text-black":" text-white")}>
         <div className={"pl-4 pr-4 hover:drop-shadow hover:cursor-pointer "+(isScrolled?" hover:text-emerald-500":" hover:text-emerald-200")}>
-          About
+          <Link href="/pricing"><a className={"hover:drop-shadow hover:cursor-pointer "+(isScrolled?"text-black hover:text-emerald-500":"text-white hover:text-emerald-200")}>
+            About
+          </a></Link>
+        </div>
+        <div className={"pl-4 pr-4"}>
+          <Link href="/pricing"><a className={"hover:drop-shadow hover:cursor-pointer "+(isScrolled?"text-black hover:text-emerald-500":"text-white hover:text-emerald-200")}>
+            Pricing
+          </a></Link>
         </div>
         <div className={"pl-4 pr-4 hover:drop-shadow hover:cursor-pointer "+(isScrolled?" hover:text-emerald-500":" hover:text-emerald-200")}>
-          Pricing
-        </div>
-        <div className={"pl-4 pr-4 hover:drop-shadow hover:cursor-pointer "+(isScrolled?" hover:text-emerald-500":" hover:text-emerald-200")}>
-          Blog
+          <Link href="/pricing"><a className={"hover:drop-shadow hover:cursor-pointer "+(isScrolled?"text-black hover:text-emerald-500":"text-white hover:text-emerald-200")}>
+            Blog
+          </a></Link>
         </div>
         <div className={"pl-4 pr-4 hover:drop-shadow hover:cursor-pointer"+(isScrolled?" hover:text-emerald-500":" hover:text-emerald-200")}>
-          Documentation
+          <Link href="/pricing"><a className={"hover:drop-shadow hover:cursor-pointer "+(isScrolled?"text-black hover:text-emerald-500":"text-white hover:text-emerald-200")}>
+            Documentation
+          </a></Link>
         </div>
       </div>
       <div className={"hidden md:block "}>
