@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import Link from 'next/link'
 // import dashboardImage from "../public/dashboard_placeholder.png"
 
 const HeroSection = () => {
@@ -16,7 +16,9 @@ const HeroSection = () => {
               </div>
               <div className="pl-[10vw] pt-[5vh] flex flex-row">
                 <div>
-                  <button className="bg-slate-800 shadow-md text-white rounded-lg px-8 py-2 mr-4 text-lg font-bold font-mono hover:shadow-lg hover:bg-slate-900 md:text-base md:px-4 md:py-2 md:mr-2">Try our Demo!</button>
+                  <Link href="/demo">
+                    <button className="bg-slate-800 shadow-md text-white rounded-lg px-8 py-2 mr-4 text-lg font-bold font-mono hover:shadow-lg hover:bg-slate-900 md:text-base md:px-4 md:py-2 md:mr-2">Try our Demo!</button>
+                  </Link>
                   <button className="bg-slate-200 text-black shadow-md rounded-lg px-8 py-2 ml-4 text-lg font-bold font-mono hover:shadow-lg hover:bg-slate-100 md:text-base md:px-4 md:py-2 md:ml-2">Contact Us</button>
                 </div>
               </div>

@@ -26,26 +26,28 @@ const Navbar = () => {
     </nav> */}
     <nav className={"flex flex-row justify-between px-12 md:px-6 items-center fixed top-0 left-0 h-[10vh] w-full "+(isScrolled?"shadow-[0px_4px_20px_0px_rgba(0,0,0,.15)] bg-[rgba(255,255,255,0.8)] border-none":"bg-[rgba(0,0,0,0.15)]  border-b-2 border-b-white")}>
       <div className={"text-3xl md:text-2xl font-mono "+(isScrolled?" text-black":" text-white")}>
-        Plorus
+          <Link href="/"><a className={"transition-none "+(isScrolled?"text-black hover:text-black":"text-white hover:text-white")}>
+            Plorus
+          </a></Link>
       </div>
-      <div className={"md:hidden flex flex-row space-between font-mono text-xl"+(isScrolled?" text-black":" text-white")}>
+      <div className={"md:hidden flex flex-row space-between font-mono text-xl"}>
         <div className={"pl-4 pr-4 hover:drop-shadow hover:cursor-pointer "+(isScrolled?" hover:text-emerald-500":" hover:text-emerald-200")}>
-          <Link href="/pricing"><a className={"hover:drop-shadow hover:cursor-pointer "+(isScrolled?"text-black hover:text-emerald-500":"text-white hover:text-emerald-200")}>
+          <Link href="/about"><a className={"transition-none hover:drop-shadow hover:cursor-pointer "+(isScrolled?"text-black hover:text-emerald-500":"text-white hover:text-emerald-200")}>
             About
           </a></Link>
         </div>
         <div className={"pl-4 pr-4"}>
-          <Link href="/pricing"><a className={"hover:drop-shadow hover:cursor-pointer "+(isScrolled?"text-black hover:text-emerald-500":"text-white hover:text-emerald-200")}>
+          <Link href="/pricing"><a className={"transition-none hover:drop-shadow hover:cursor-pointer "+(isScrolled?"text-black hover:text-emerald-500":"text-white hover:text-emerald-200")}>
             Pricing
           </a></Link>
         </div>
         <div className={"pl-4 pr-4 hover:drop-shadow hover:cursor-pointer "+(isScrolled?" hover:text-emerald-500":" hover:text-emerald-200")}>
-          <Link href="/pricing"><a className={"hover:drop-shadow hover:cursor-pointer "+(isScrolled?"text-black hover:text-emerald-500":"text-white hover:text-emerald-200")}>
+          <Link href="/pricing"><a className={"transition-none hover:drop-shadow hover:cursor-pointer "+(isScrolled?"text-black hover:text-emerald-500":"text-white hover:text-emerald-200")}>
             Blog
           </a></Link>
         </div>
         <div className={"pl-4 pr-4 hover:drop-shadow hover:cursor-pointer"+(isScrolled?" hover:text-emerald-500":" hover:text-emerald-200")}>
-          <Link href="/pricing"><a className={"hover:drop-shadow hover:cursor-pointer "+(isScrolled?"text-black hover:text-emerald-500":"text-white hover:text-emerald-200")}>
+          <Link href="/pricing"><a className={"transition-none hover:drop-shadow hover:cursor-pointer "+(isScrolled?"text-black hover:text-emerald-500":"text-white hover:text-emerald-200")}>
             Documentation
           </a></Link>
         </div>
