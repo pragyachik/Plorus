@@ -2,7 +2,7 @@ import PricingSection from "../components/PricingSection"
 import Layout from "../components/Layout"
 
 
-export default function Home() {
+export default function Pricing() {
   return (
     <>
       <Layout>
