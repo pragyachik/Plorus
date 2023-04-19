@@ -1,4 +1,4 @@
-import About from "../components/About"
+import AboutSection from "../components/AboutSection"
 import Layout from "../components/Layout"
 
 
@@ -6,7 +6,7 @@ export default function About() {
   return (
     <>
       <Layout>
-        <About></About>
+        <AboutSection></AboutSection>
       </Layout>
     </>
   )
