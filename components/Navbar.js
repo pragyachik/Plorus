@@ -100,7 +100,7 @@ const Navbar = () => {
               <button className="text-2xl pr-6" onClick={()=>setShowMenu(false)}>X</button>
             </div>
         {mobileLinks.map((link)=>{
-            return(<div className="border-b-2 border-b-slate-300 py-4 font-mono w-full text-xl text-center">
+            return(<div key={link.name} className="border-b-2 border-b-slate-300 py-4 font-mono w-full text-xl text-center">
               <Link href={link.href}><a className="text-slate-500 hover:text-slate-500 transition:none">{link.name}</a></Link>
             </div>)
         })}
