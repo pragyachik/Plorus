@@ -6,6 +6,26 @@ import Link from 'next/link'
 const Navbar = () => {
   const { scrollY } = useScroll()
   const [isScrolled, setScrollPosition] = useState(false)
+  const [showMenu, setShowMenu] = useState(false)
+
+  const mobileLinks = [
+    {
+      name: "About",
+      href: "/about"
+    },
+    {
+      name: "Pricing",
+      href: "/pricing"
+    },
+    {
+      name: "Blog",
+      href: "/"
+    },
+    {
+      name: "Documentation",
+      href: "/"
+    },
+  ]
 
   useMotionValueEvent(scrollY, "change", (latest) => {
     if(latest>0){
@@ -52,7 +72,7 @@ const Navbar = () => {
           </a></Link>
         </div>
       </div>
-      <div className={"hidden md:block "}>
+      <div className={"hidden md:block "} onClick={()=>setShowMenu(true)}>
         <svg
         xmlns="http://www.w3.org/2000/svg"
         class="w-8 h-8"
@@ -74,6 +94,17 @@ const Navbar = () => {
         <div class={"w-8 h-0.5 "+(isScrolled?"bg-black":"bg-white")}></div>
       </div> */}
     </nav>
+    {showMenu&&<div className="max-md:hidden fixed top-0 left-0 w-full h-full bg-slate-200 flex flex-col items-center justify-start">
+            <div className="border-b-2 border-b-slate-300 py-4 font-mono w-full text-xl flex flex-row justify-between">
+              <div className="pl-6 text-2xl text-slate-400 font-mono">Plorus</div>
+              <button className="text-2xl pr-6" onClick={()=>setShowMenu(false)}>X</button>
+            </div>
+        {mobileLinks.map((link)=>{
+            return(<div className="border-b-2 border-b-slate-300 py-4 font-mono w-full text-xl text-center">
+              <Link href={link.href}><a className="text-slate-500 hover:text-slate-500 transition:none">{link.name}</a></Link>
+            </div>)
+        })}
+      </div>}
     </>
   )
 }
