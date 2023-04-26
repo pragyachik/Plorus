@@ -1,13 +1,5 @@
 import { useState } from "react"
 
-const { Configuration, OpenAIApi } = require("openai");
-
-const configuration = new Configuration({
-  apiKey: process.env.REACT_APP_OPENAI_API_KEY,
-});
-
-const openai = new OpenAIApi(configuration);
-
 function downloadInnerHtml(filename, value, mimeType) {
   var link = document.createElement('a');
   mimeType = mimeType || 'text/plain';
@@ -33,20 +25,31 @@ export default function ResearchApp() {
     if(thesis){
       prompt = "Write a ten page thesis, in APA style, including citations and bibliography, on the topic\"" + userRequest + "\"";
     }
-    const response = await openai.createCompletion({
-      model: "text-davinci-003",
-      prompt: prompt,
-      temperature: 0,
-      max_tokens: 1000,
+    const response = await fetch("/api/getGptResponse",{
+      method:"POST",
+      body:JSON.stringify({
+        model: "text-davinci-003",
+        prompt: prompt,
+        temperature: 0,
+        max_tokens: 1000,
+      }),
+      headers: {
+        "Content-Type":"application/json"
+      }
     });
+
+    const responseData = await response.json()
+    // console.log('response: ')
+    // console.log(response)
+    // console.log("responseData: ")
+    // console.log(responseData)
     setStatus(Number(response.status))
     if(Number(response.status)!=200){
       setErrorMessage(JSON.stringify(response))
     }
-    console.log(response)
     setShowButton(true)
     // setUnformattedResponseText(response.data.choices[0].text)
-    let responseText = response.data.choices[0].text//.replaceAll("\n","<br>");
+    let responseText = responseData.message//.replaceAll("\n","<br>");
     console.log(responseText)
     setResponse(responseText)
   }
