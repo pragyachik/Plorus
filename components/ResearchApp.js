@@ -65,10 +65,10 @@ export default function ResearchApp() {
 
   return (
     <>
-      <div className="h-[92vh] w-full bg-slate-100 text-6xl p-auto flex flex-row items-center justify-around font-mono font-semibold text-slate-400">
+      <div className="h-[92vh] w-full bg-white text-6xl p-auto flex flex-row items-center justify-around font-mono font-semibold text-black">
         <div className="text-lg w-[40vw] items-center flex flex-col">
           <div>
-              Chatbox <br></br><span className="text-stone-400 text-sm">&#x28;Generating abstract can take 10s or more&#41;</span>
+              Chatbox <br></br><span className="text-slate-400 text-sm">&#x28;Generating abstract can take 10s or more&#41;</span>
           </div>
           <div className="chatbox__chatarea">
             <textarea className="chatbox__textarea border-2 border-slate-400" onChange={getVal} placeholder="enter text here" rows="3" cols="30"></textarea>
@@ -84,6 +84,19 @@ export default function ResearchApp() {
             {status==200?response:errormessage}
           </div>
         </div>
+        {/* <div className="flex flex-col w-[90%] h-full">
+          <div className="my-5 bg-white w-full h-[10vh]"></div>
+          <div className="flex flex-row h-full w-full">
+            <div className="flex flex-col my-2 w-[20%]">
+              <div className="bg-white w-full h-[80%]"></div>
+              <div className="bg-white w-full h-[20%]"></div>
+            </div>
+            <div className="flex flex-col my-2 h-full w-full">
+              <div className="bg-white w-full h-[80%]"></div>
+              <div className="bg-white w-full h-[20%]"></div>
+            </div>
+          </div>
+        </div> */}
       </div>
     </>
   )

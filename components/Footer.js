@@ -2,7 +2,7 @@
 const Footer = ({isStone=false}) => {
   return (
     <>
-      <div className={"w-full flex flex-col justify-between px-10 "+(isStone?"h-[12vh] bg-stone-600 pt-2":" pt-8 pb-8 h-[70vh]  bg-gray-800")}>
+      <div className={"w-full flex flex-col justify-between px-10 "+(isStone?"h-[12vh] bg-gray-800 pt-2":" pt-8 pb-8 h-[70vh]  bg-gray-800")}>
         <div className={"w-full flex flex-col justify-left h-[10vh] px-[10vw] md:px-[1vw] pt-4 "+(isStone?"hidden":"")}>
           <div className="text-slate-300 font-mono">Stay Updated</div>
           <div className="flex flex-row mt-2">

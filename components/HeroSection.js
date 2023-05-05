@@ -31,7 +31,7 @@ const HeroSection = () => {
         </div>
         <div className="h-[100vh] w-full bg-white pb-[5vh]">
             <div className='mx-[10vw] mt-[10vh] h-[10vh] items-center font-bold text-slate-500 text-2xl'>
-              Benefits of Plorus
+              How Plorus works
             </div>
             <div className='flex flex-row h-[70vh] mx-[10vw] w-[80vw] border-2 border-slate-200'>
 
