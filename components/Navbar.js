@@ -8,7 +8,7 @@ const Navbar = () => {
   const [isScrolled, setScrollPosition] = useState(false)
   const [showMenu, setShowMenu] = useState(false)
 
-  const mobileLinks = [
+  const allLinks = [
     {
       name: "About",
       href: "/about"
@@ -19,11 +19,11 @@ const Navbar = () => {
     },
     {
       name: "Blog",
-      href: "/"
+      href: "/blog"
     },
     {
       name: "Documentation",
-      href: "/"
+      href: "/documentation"
     },
   ]
 
@@ -51,26 +51,15 @@ const Navbar = () => {
           </a></Link>
       </div>
       <div className={"md:hidden flex flex-row space-between font-mono text-xl"}>
-        <div className={"pl-4 pr-4 hover:drop-shadow hover:cursor-pointer "+(isScrolled?" hover:text-emerald-500":" hover:text-emerald-200")}>
-          <Link href="/about"><a className={"transition-none hover:drop-shadow hover:cursor-pointer "+(isScrolled?"text-black hover:text-emerald-500":"text-white hover:text-emerald-200")}>
-            About
-          </a></Link>
-        </div>
-        <div className={"pl-4 pr-4"}>
-          <Link href="/pricing"><a className={"transition-none hover:drop-shadow hover:cursor-pointer "+(isScrolled?"text-black hover:text-emerald-500":"text-white hover:text-emerald-200")}>
-            Pricing
-          </a></Link>
-        </div>
-        <div className={"pl-4 pr-4 hover:drop-shadow hover:cursor-pointer "+(isScrolled?" hover:text-emerald-500":" hover:text-emerald-200")}>
-          <Link href="/pricing"><a className={"transition-none hover:drop-shadow hover:cursor-pointer "+(isScrolled?"text-black hover:text-emerald-500":"text-white hover:text-emerald-200")}>
-            Blog
-          </a></Link>
-        </div>
-        <div className={"pl-4 pr-4 hover:drop-shadow hover:cursor-pointer"+(isScrolled?" hover:text-emerald-500":" hover:text-emerald-200")}>
-          <Link href="/pricing"><a className={"transition-none hover:drop-shadow hover:cursor-pointer "+(isScrolled?"text-black hover:text-emerald-500":"text-white hover:text-emerald-200")}>
-            Documentation
-          </a></Link>
-        </div>
+        {allLinks.map((link)=>{
+              return(
+                <div key={link.name} className={"pl-4 pr-4 hover:drop-shadow hover:cursor-pointer "+(isScrolled?" hover:text-emerald-500":" hover:text-emerald-200")}>
+                  <Link href={link.href}><a className={"transition-none hover:drop-shadow hover:cursor-pointer "+(isScrolled?"text-black hover:text-emerald-500":"text-white hover:text-emerald-200")}>
+                    {link.name}
+                  </a></Link>
+                </div>
+              )
+          })}
       </div>
       <div className={"hidden md:block "} onClick={()=>setShowMenu(true)}>
         <svg
@@ -99,7 +88,7 @@ const Navbar = () => {
               <div className="pl-6 text-2xl text-slate-400 font-mono">Plorus</div>
               <button className="text-2xl pr-6" onClick={()=>setShowMenu(false)}>X</button>
             </div>
-        {mobileLinks.map((link)=>{
+        {allLinks.map((link)=>{
             return(<div key={link.name} className="border-b-2 border-b-slate-300 py-4 font-mono w-full text-xl text-center">
               <Link href={link.href}><a className="text-slate-500 hover:text-slate-500 transition:none">{link.name}</a></Link>
             </div>)
