@@ -1,4 +1,5 @@
 import { useState } from "react"
+import ResponseJson from "../utils/db/response.json"
 
 function downloadInnerHtml(filename, value, mimeType) {
   var link = document.createElement('a');
@@ -25,33 +26,41 @@ export default function ResearchApp() {
     if(thesis){
       prompt = "Write a ten page thesis, in APA style, including citations and bibliography, on the topic\"" + userRequest + "\"";
     }
-    const response = await fetch("/api/getGptResponse",{
-      method:"POST",
-      body:JSON.stringify({
-        model: "text-davinci-003",
-        prompt: prompt,
-        temperature: 0,
-        max_tokens: 1000,
-      }),
-      headers: {
-        "Content-Type":"application/json"
-      }
+    // const response = await fetch("/api/getGptResponse",{
+    //   method:"POST",
+    //   body:JSON.stringify({
+    //     model: "text-davinci-003",
+    //     prompt: prompt,
+    //     temperature: 0,
+    //     max_tokens: 1000,
+    //   }),
+    //   headers: {
+    //     "Content-Type":"application/json"
+    //   }
+    // });
+    const response = await fetch("http://172.105.52.83/returnjson", {
+      method:"GET",
+      // mode: 'no-cors',
     });
+    // console.log(response)
 
     const responseData = await response.json()
+    // console.log(responseData)
     // console.log('response: ')
     // console.log(response)
     // console.log("responseData: ")
     // console.log(responseData)
+
     setStatus(Number(response.status))
     if(Number(response.status)!=200){
       setErrorMessage(JSON.stringify(response))
     }
     setShowButton(true)
+
     // setUnformattedResponseText(response.data.choices[0].text)
-    let responseText = responseData.message//.replaceAll("\n","<br>");
-    console.log(responseText)
-    setResponse(responseText)
+    // let responseText = responseData.message//.replaceAll("\n","<br>");
+    // console.log(responseText)
+    setResponse(JSON.stringify(responseData))
   }
 
   const getVal = (value) => {
