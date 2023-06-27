@@ -38,7 +38,7 @@ export default function ResearchApp() {
     //     "Content-Type":"application/json"
     //   }
     // });
-    const response = await fetch("http://172.105.52.83/returnjson", {
+    const response = await fetch("http://172.105.52.83/api/returnjson", {
       method:"GET",
       // mode: 'no-cors',
     });
