@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 
+//http://127.0.0.1:5000
+apiIp = "http://172.105.52.83"
+
 const ComponentSelector = () => {
   const [selectedComponent, setSelectedComponent] = useState(null);
 
@@ -65,7 +68,7 @@ const RedPajama = () => {
     };
 
     //http://172.105.52.83
-    const response = await fetch("http://127.0.0.1:5000/api/getRedPajamaToken", options);
+    const response = await fetch(apiIp+"/api/getRedPajamaToken", options);
     // console.log(response)
 
     const responseData = await response.json()
@@ -123,7 +126,7 @@ const TokenOutput = () => {
     };
 
     //http://172.105.52.83
-    const response = await fetch("http://127.0.0.1:5000/api/getTokenOutput", options);
+    const response = await fetch(apiIp+"/api/getTokenOutput", options);
     // console.log(response)
 
     const responseData = await response.json()
