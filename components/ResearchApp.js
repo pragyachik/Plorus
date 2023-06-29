@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 //http://127.0.0.1:5000
-apiIp = "http://172.105.52.83"
+const apiIp = "http://172.105.52.83"
 
 const ComponentSelector = () => {
   const [selectedComponent, setSelectedComponent] = useState(null);
