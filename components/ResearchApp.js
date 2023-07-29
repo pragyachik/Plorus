@@ -27,7 +27,8 @@ const ComponentSelector = () => {
       case 'Bert':
         return <Bert />;
       default:
-        return <TokenOutput />;
+        return <Bert></Bert>
+        // return <TokenOutput />;
     }
   };
 
