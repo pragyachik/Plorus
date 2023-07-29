@@ -33,7 +33,6 @@ const Navbar = () => {
     }
     else{
       setScrollPosition(false)
-      console.log(latest)
     }
   })
 
