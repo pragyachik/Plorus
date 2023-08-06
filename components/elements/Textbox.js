@@ -1,13 +1,16 @@
 import React, { useState, useEffect } from 'react';
 
-const TextBoxWithLimit = () => {
-  const [text, setText] = useState('');
-  const [characterLimit] = useState(2000);
-  const [tokenLimit] = useState(500);
+const TextBoxWithLimit = ({text, setText, characterLimit, tokenLimit}) => {
+  // const [text, setText] = useState('');
+  // const [characterLimit] = useState(characterLimit);
+  // const [tokenLimit] = useState(tokenLimit);
   const [exceeded, setExceeded] = useState(false);
 
   useEffect(() => {
     const charCount = text.length;
+    if(typeof(text)!="string"){
+      text = JSON.stringify(text)
+    }
     const tokenCount = text.trim().split(/\s+/).filter(Boolean).length;
 
     if (charCount >= (characterLimit) || tokenCount >= (tokenLimit)) {
@@ -16,6 +19,7 @@ const TextBoxWithLimit = () => {
       setExceeded(false);
     }
   }, [text, characterLimit, tokenLimit]);
+  
 
   const handleChange = (event) => {
     const inputValue = event.target.value;
